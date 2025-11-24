@@ -160,25 +160,38 @@
             position: absolute;
             left:0; top: 2.7rem;
             background: #fff;
-            min-width: 170px;
+            min-width: 240px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.12);
             border-radius:6px;
             z-index: 99;
+            padding-bottom: 6px;
         }
-        .dropdown-content li {
+        .dropdown-content > li {
             font-size: 1rem;
-            padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+            padding: 0.7rem 1.2rem 0.3rem 1.2rem;
             color: #004d40;
             background: #f8fafb;
             border-bottom: 1px solid #efefef;
         }
-        .dropdown-content li:last-child { border-bottom:none; }
-        .dropdown-content li a {
+        .dropdown-content > li:last-child { border-bottom:none; }
+        .dropdown-content strong {
+            color: #00796b;
+        }
+        .dropdown-content ul {
+            list-style-type: disc;
+            margin: 3px 0 5px 22px;
+            padding-left: 0;
+        }
+        .dropdown-content ul li {
+            padding: 2px 0;
+            font-size: 0.97rem;
+        }
+        .dropdown-content ul li a {
             color: #006e54;
             text-decoration: none;
             font-weight: bold;
         }
-        .dropdown-content li a:hover {
+        .dropdown-content ul li a:hover {
             text-decoration: underline;
             color: #004d40;
         }
@@ -233,141 +246,54 @@
                 </div>
                 <div class="links-section">
                     <div class="chapter-tabs">
-                        <!-- Chapter 1-20 Example; replicate for all chapters -->
                         <div class="chapter-tab" onclick="toggleChapter(event, 'c01ch01')">Chapter 01
-                            <ul class="dropdown-content" id="c11ch1">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
+                            <ul class="dropdown-content" id="c01ch01">
+                                <li>
+                                    <strong>Notes:</strong>
+                                    <ul>
+                                        <li><a href="notes_file1.pdf" target="_blank">Photosynthesis Notes PDF</a></li>
+                                        <li><a href="notes_summary.txt" target="_blank">Text Summary</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Video Lecture:</strong>
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=xyz" target="_blank">YouTube Intro</a></li>
+                                        <li><a href="https://vimeo.com/videoID" target="_blank">Detailed Vimeo Video</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Online Test:</strong>
+                                    <ul>
+                                        <li><a href="https://btwahulesir.github.io/TEST/Mobileviewfilephotosynthesis.html" target="_blank">Main Quiz</a></li>
+                                        <li><a href="https://btwahulesir.github.io/TEST/ExtraTest.html" target="_blank">Practice Test</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c02ch02')">Chapter 02
-                            <ul class="dropdown-content" id="c02ch02">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 2
+                            <ul class="dropdown-content" id="c11ch2">
+                                <li>
+                                    <strong>Notes:</strong>
+                                    <ul>
+                                        <li><a href="chapter2_notes.pdf" target="_blank">Cell Structure Notes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Video Lecture:</strong>
+                                    <ul>
+                                        <li><a href="https://youtu.be/abc2" target="_blank">YouTube Video</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Online Test:</strong>
+                                    <ul>
+                                        <li><a href="chapter2_test.html" target="_blank">Chapter 2 MCQ Quiz</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c03ch03')">Chapter 03
-                            <ul class="dropdown-content" id="c03ch03">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c04ch04')">Chapter 04
-                            <ul class="dropdown-content" id="c04ch04">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c05ch05')">Chapter 05
-                            <ul class="dropdown-content" id="c05ch05">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c06ch06')">Chapter 06
-                            <ul class="dropdown-content" id="c06ch06">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c07ch07')">Chapter 07
-                            <ul class="dropdown-content" id="c07ch07">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c08ch08')">Chapter 08
-                            <ul class="dropdown-content" id="c08ch08">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c09ch09')">Chapter 09
-                            <ul class="dropdown-content" id="c09ch09">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c10ch10')">Chapter 10
-                            <ul class="dropdown-content" id="c10ch10">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch11')">Chapter 11
-                            <ul class="dropdown-content" id="c11ch11">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="https://btwahulesir.github.io/TEST/Mobileviewfilephotosynthesis.html">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c12ch12')">Chapter 12
-                            <ul class="dropdown-content" id="c11ch12">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c13ch13')">Chapter 13
-                            <ul class="dropdown-content" id="c13ch13">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c14ch14')">Chapter 14
-                            <ul class="dropdown-content" id="c14ch14">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c15ch15')">Chapter 15
-                            <ul class="dropdown-content" id="c15ch15">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c16ch16')">Chapter 16
-                            <ul class="dropdown-content" id="c16ch16">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c17ch17')">Chapter 17
-                            <ul class="dropdown-content" id="c17ch17">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c18ch18')">Chapter 18
-                            <ul class="dropdown-content" id="c18ch18">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c19ch19')">Chapter 19
-                            <ul class="dropdown-content" id="c19ch19">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <!-- Repeat chapter-tab blocks up to Chapter 20 -->
+                        <!-- Repeat chapter-tabs with unique IDs and multiple files for each section up to Chapter 20/desired chapters -->
                     </div>
                 </div>
             </div>
@@ -381,98 +307,29 @@
                 </div>
                 <div class="links-section">
                     <div class="chapter-tabs">
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch1')">Chapter 01
-                            <ul class="dropdown-content" id="c11ch1">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'c12ch1')">Chapter 1
+                            <ul class="dropdown-content" id="c12ch1">
+                                <li>
+                                    <strong>Notes:</strong>
+                                    <ul>
+                                        <li><a href="c12_ch1_notes.pdf" target="_blank">Genetics Theory</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Video Lecture:</strong>
+                                    <ul>
+                                        <li><a href="https://youtube.com/example_c12ch1" target="_blank">YouTube Genetics</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Online Test:</strong>
+                                    <ul>
+                                        <li><a href="c12_ch1_test.html" target="_blank">Test Link</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 02
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 03
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 04
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 05
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 06
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 07
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 08
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 09
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 10
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch11')">Chapter 11
-                            <ul class="dropdown-content" id="c11ch11">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 12
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 13
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <!-- Add more chapter-tabs as needed -->
+                        <!-- Add more chapter-tabs for other chapters as needed -->
                     </div>
                 </div>
             </div>
@@ -486,231 +343,29 @@
                 </div>
                 <div class="links-section">
                     <div class="chapter-tabs">
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch1')">Chapter 01
-                            <ul class="dropdown-content" id="c11ch1">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'neetRch1')">Chapter 1
+                            <ul class="dropdown-content" id="neetRch1">
+                                <li>
+                                    <strong>Notes:</strong>
+                                    <ul>
+                                        <li><a href="neetR_ch1_notes.pdf" target="_blank">Principles Notes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Video Lecture:</strong>
+                                    <ul>
+                                        <li><a href="https://youtube.com/neetR_example" target="_blank">YouTube NEET</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Online Test:</strong>
+                                    <ul>
+                                        <li><a href="neetR_ch1_test.html" target="_blank">Quiz</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 02
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 03
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 04
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 05
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 06
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 07
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 08
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 09
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 10
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 11
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 12
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 13
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 14
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 15
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 16
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 17
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 18
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 19
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 20
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 21
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 22
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 23
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 24
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 25
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 26
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 27
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 28
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 29
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 30
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 31
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                         <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 32
-                            <ul class="dropdown-content" id="c11ch2">
-                                <li><a href="#">Notes</a></li>
-                                <li><a href="#">Video Lecture</a></li>
-                                <li><a href="#">Online Test</a></li>
-                            </ul>
-                        </div>
-                        <!-- Add more chapter-tabs as needed -->
+                        <!-- Add more chapter-tabs for other chapters as needed -->
                     </div>
                 </div>
             </div>
@@ -756,8 +411,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
