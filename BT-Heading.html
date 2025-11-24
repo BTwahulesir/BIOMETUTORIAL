@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biometutorial - Biology Learning Hub</title>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            margin: 0;
+            background-color: #f4f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: white;
+            position: relative;
+            padding: 0.5rem 0 0 0;
+        }
+        .header-ribbon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+        }
+        .logo {
+            flex: 0 0 120px;
+        }
+        .logo img {
+            height: 80px;
+            width: 120px;
+            object-fit: contain;
+            background: white;
+            border-radius: 10px;
+        }
+        .title-center {
+            flex: 1 1 auto;
+            text-align: center;
+        }
+        .title-center h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            line-height: 2.2rem;
+        }
+        .title-center .subtitle {
+            font-size: 1.15rem;
+            font-style: italic;
+            margin: 0.4rem 0;
+        }
+        .wahule-info {
+            flex: 0 0 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .wahule-img {
+            width: 170px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 7px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+            border: 3px solid #fff;
+        }
+        .wahule-details {
+            text-align: right;
+            font-size: 0.97rem;
+            line-height: 1.35em;
+        }
+        .wahule-details a, .wahule-details .phone {
+            color: #f9e903;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 1rem auto;
+            padding: 0 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        nav button {
+            background-color: #00796b;
+            border: none;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            margin: 0 0.2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav button:hover, nav button.active {
+            background-color: #004d40;
+        }
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            margin-bottom: 1rem;
+        }
+        h2 { color: #00796b; }
+        .batch-content {
+            display: flex; gap: 2rem; flex-wrap: wrap;
+        }
+        .image-section {
+            flex: 1 1 250px; min-width: 240px; text-align: center;
+        }
+        .image-section img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+        .links-section {
+            flex: 2 1 600px; min-width: 280px;
+        }
+        ul { list-style: none; padding: 0; }
+        ul li { margin: 0.5rem 0; }
+        ul.chapter-list { margin-left: 1rem; list-style-type: disc; }
+        ul li a {
+            color: #004d40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul li a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            background-color: #004d40;
+            color: white;
+            margin-top: 2rem;
+        }
+        @media (max-width: 850px) {
+            .header-ribbon, .batch-content { flex-direction: column; align-items: center;}
+            .wahule-info { align-items: center;}
+            .wahule-details { text-align: center;}
+            .logo { margin-bottom: 12px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-ribbon">
+            <div class="logo">
+                <img src="https://via.placeholder.com/120x80?text=Logo" alt="Biometutorial logo" />
+            </div>
+            <div class="title-center">
+                <h1>Biometutorial</h1>
+                <div class="subtitle">Biology Learning Hub by Rajendra R. Wahule Sir</div>
+            </div>
+            <div class="wahule-info">
+                <img class="wahule-img" src="https://via.placeholder.com/170x100?text=Wahule+Sir" alt="Rajendra R Wahule Sir" />
+                <div class="wahule-details">
+                    Biology Professor: Vishwajeet Science Academy<br>
+                    M.Tech, B.Pharm, M.A, LL.B. | GATE, SET Qualified<br>
+                    <a href="mailto:eicdgnk@gmail.com">Email.ID-eicdgnk@gmail.com</a><br>
+                    <span class="phone">Mobile: 8830461980</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <button class="tablink active" onclick="openBatch(event, 'Class11')">Class 11</button>
+            <button class="tablink" onclick="openBatch(event, 'Class12')">Class 12</button>
+            <button class="tablink" onclick="openBatch(event, 'NEETRepeater')">NEET Repeater</button>
+        </nav>
+        <!-- Class 11 Section -->
+        <section id="Class11" class="batch" style="display: block;">
+            <h2>Class 11 Biology</h2>
+            <div class="batch-content">
+                <div class="image-section">
+                    <img src="https://via.placeholder.com/400x250?text=Class+11+Biology+Image" alt="Class 11 Biology" />
+                </div>
+                <div class="links-section">
+                    <h3>Chapters</h3>
+                    <ul>
+                        <!-- Add chapters as needed (example shown) -->
+                        <li>Chapter 1
+                            <ul class="chapter-list">
+                                <li><a href="#" target="_blank">Notes</a></li>
+                                <li><a href="#" target="_blank">Video Lecture</a></li>
+                                <li><a href="#" target="_blank">Online Test</a></li>
+                            </ul>
+                        </li>
+                        <!-- Repeat for Chapter 2-19 -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Class 12 Section -->
+        <section id="Class12" class="batch" style="display: none;">
+            <h2>Class 12 Biology</h2>
+            <div class="batch-content">
+                <div class="image-section">
+                    <img src="https://via.placeholder.com/400x250?text=Class+12+Biology+Image" alt="Class 12 Biology" />
+                </div>
+                <div class="links-section">
+                    <h3>Chapters</h3>
+                    <ul>
+                        <!-- Add chapters as needed -->
+                        <li>Chapter 1
+                            <ul class="chapter-list">
+                                <li><a href="#" target="_blank">Notes</a></li>
+                                <li><a href="#" target="_blank">Video Lecture</a></li>
+                                <li><a href="#" target="_blank">Online Test</a></li>
+                            </ul>
+                        </li>
+                        <!-- Repeat for Chapter 2-13 -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- NEET Repeater Section -->
+        <section id="NEETRepeater" class="batch" style="display: none;">
+            <h2>NEET Repeater Batch</h2>
+            <div class="batch-content">
+                <div class="image-section">
+                    <img src="https://via.placeholder.com/400x250?text=NEET+Repeater+Biology" alt="NEET Repeater Biology" />
+                </div>
+                <div class="links-section">
+                    <h3>Chapters</h3>
+                    <ul>
+                        <!-- Add chapters as needed -->
+                        <li>Chapter 1
+                            <ul class="chapter-list">
+                                <li><a href="#" target="_blank">Notes</a></li>
+                                <li><a href="#" target="_blank">Video Lecture</a></li>
+                                <li><a href="#" target="_blank">Online Test</a></li>
+                            </ul>
+                        </li>
+                        <!-- Repeat for Chapter 2-13 -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Biometutorial by Rajendra R. Wahule Sir | Vishwajeet Science Academy
+    </footer>
+    <script>
+        function openBatch(evt, batchName) {
+            var i, batchSections, tablinks;
+            batchSections = document.getElementsByClassName("batch");
+            for (i = 0; i < batchSections.length; i++) {
+                batchSections[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(batchName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biometutorial - Biology Learning Hub</title>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            margin: 0;
+            background-color: #f4f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: white;
+            position: relative;
+            padding: 0.5rem 0 0 0;
+        }
+        .header-ribbon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+        }
+        .logo-circle {
+            flex: 0 0 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-circle img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: white;
+            border: 7px solid #987047;
+            box-shadow: 0 0 18px rgba(0,0,0,0.18);
+            display: block;
+        }
+        .title-center {
+            flex: 1 1 auto;
+            text-align: center;
+        }
+        .title-center h1 {
+            margin: 0;
+            font-size: 2.7rem;
+            letter-spacing: 2px;
+            line-height: 3rem;
+            font-weight: bold;
+        }
+        .title-center .subtitle {
+            font-size: 1.25rem;
+            font-style: italic;
+            margin: 0.5rem 0;
+        }
+        .wahule-info {
+            flex: 0 0 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .wahule-img-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wahule-img {
+            max-width:170px;
+            max-height:210px;
+            width:auto;
+            height:auto;
+            object-fit:contain;
+            border-radius:8px;
+            margin-bottom:5px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.13);
+            border:3px solid #fff;
+            background:#eef;
+        }
+        .wahule-details {
+            text-align:center;
+            font-size: 0.95rem;
+            line-height: 1.25em;
+            margin-top:3px;
+        }
+        .wahule-details a, .wahule-details .phone {
+            color: #f9e903;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        .container {
+            max-width:1200px;
+            margin:1rem auto;
+            padding:0 1rem;
+        }
+        nav {
+            display:flex;
+            justify-content:center;
+            margin-bottom:1rem;
+        }
+        nav button {
+            background-color:#00796b;
+            border:none;
+            color:white;
+            padding:0.7rem 1.2rem;
+            margin:0 0.2rem;
+            font-size:1rem;
+            cursor:pointer;
+            border-radius:4px;
+            transition:background-color 0.3s;
+        }
+        nav button:hover, nav button.active {
+            background-color:#004d40;
+        }
+        section {
+            background-color:white;
+            border-radius:8px;
+            box-shadow:0 4px 8px rgba(0,0,0,0.1);
+            padding:1rem 2rem;
+            margin-bottom:1rem;
+        }
+        h2 { color: #00796b; }
+        .batch-content {
+            display: flex; gap: 2rem; flex-wrap: wrap;
+        }
+        .image-section {
+            flex: 1 1 250px; min-width: 240px; text-align: center;
+        }
+        .image-section img {
+            max-width:100%;
+            border-radius:8px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.12);
+        }
+        .links-section {
+            flex: 2 1 600px; min-width: 280px;
+        }
+        .chapter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .chapter-tab {
+            background: #eef6f7;
+            color: #004d40;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 0.5rem 1.1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.2s;
+        }
+        .chapter-tab:hover, .chapter-tab.active {
+            background: #b6ebe2;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left:0; top: 2.7rem;
+            background: #fff;
+            min-width: 170px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            border-radius:6px;
+            z-index: 99;
+        }
+        .dropdown-content li {
+            font-size: 1rem;
+            padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+            color: #004d40;
+            background: #f8fafb;
+            border-bottom: 1px solid #efefef;
+        }
+        .dropdown-content li:last-child { border-bottom:none; }
+        .dropdown-content li a {
+            color: #006e54;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .dropdown-content li a:hover {
+            text-decoration: underline;
+            color: #004d40;
+        }
+        footer {
+            text-align:center;padding:1rem;font-size:0.85rem;
+            background-color:#004d40;color:white;margin-top:2rem;
+        }
+        @media (max-width: 850px) {
+            .header-ribbon, .batch-content { flex-direction: column; align-items: center;}
+            .logo-circle { margin-bottom: 12px;}
+            .wahule-info { align-items: center;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-ribbon">
+            <div class="logo-circle">
+                <img src="IMG_20250317_072547.jpg" alt="Biometutorial logo" />
+            </div>
+            <div class="title-center">
+                <h1>Biometutorial</h1>
+                <div class="subtitle">Biology Learning Hub by Rajendra R. Wahule Sir</div>
+            </div>
+            <div class="wahule-info">
+                <div class="wahule-img-box">
+                    <img class="wahule-img" src="IMG_20251123_231102.jpg" alt="Rajendra R. Wahule Sir" />
+                </div>
+                <div class="wahule-details">
+                    Biology Professor<br>
+                    Vishwajeet Science Academy<br>
+                    M.Tech, B.Pharm, M.A, LL.B.<br>
+                    GATE, SET Qualified<br>
+                    <a href="mailto:eicdgnk@gmail.com">eicdgnk@gmail.com</a><br>
+                    <span class="phone">8830461980</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <button class="tablink active" onclick="openBatch(event, 'Class11')">Class 11</button>
+            <button class="tablink" onclick="openBatch(event, 'Class12')">Class 12</button>
+            <button class="tablink" onclick="openBatch(event, 'NEETRepeater')">NEET Repeater</button>
+        </nav>
+        <!-- Class 11 Section -->
+        <section id="Class11" class="batch" style="display: block;">
+            <h2>Class 11 Biology</h2>
+            <div class="batch-content">
+                <div class="image-section">
+                    <img src="https://via.placeholder.com/400x250?text=Class+11+Biology+Image" alt="Class 11 Biology" />
+                </div>
+                <div class="links-section">
+                    <div class="chapter-tabs">
+                        <!-- Repeat for Chapter 1-20 -->
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch1')">Chapter 1
+                            <ul class="dropdown-content" id="c11ch1">
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Video Lecture</a></li>
+                                <li><a href="#">Online Test</a></li>
+                            </ul>
+                        </div>
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'c11ch2')">Chapter 2
+                            <ul class="dropdown-content" id="c11ch2">
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Video Lecture</a></li>
+                                <li><a href="#">Online Test</a></li>
+                            </ul>
+                        </div>
+                        <!-- Add more chapter-tabs up to Chapter 20 as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Class 12 Section -->
+        <section id="Class12" class="batch" style="display: none;">
+            <h2>Class 12 Biology</h2>
+            <div class="batch-content">
+                <div class="image-section">
+                    <img src="https://via.placeholder.com/400x250?text=Class+12+Biology+Image" alt="Class 12 Biology" />
+                </div>
+                <div class="links-section">
+                    <div class="chapter-tabs">
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'c12ch1')">Chapter 1
+                            <ul class="dropdown-content" id="c12ch1">
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Video Lecture</a></li>
+                                <li><a href="#">Online Test</a></li>
+                            </ul>
+                        </div>
+                        <!-- Add more chapter-tabs as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- NEET Repeater Section -->
+        <section id="NEETRepeater" class="batch" style="display: none;">
+            <h2>NEET Repeater Batch</h2>
+            <div class="batch-content">
+                <div class="image-section">
+                    <img src="https://via.placeholder.com/400x250?text=NEET+Repeater+Biology" alt="NEET Repeater Biology" />
+                </div>
+                <div class="links-section">
+                    <div class="chapter-tabs">
+                        <div class="chapter-tab" onclick="toggleChapter(event, 'neetch1')">Chapter 1
+                            <ul class="dropdown-content" id="neetch1">
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Video Lecture</a></li>
+                                <li><a href="#">Online Test</a></li>
+                            </ul>
+                        </div>
+                        <!-- Add more chapter-tabs as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Biometutorial by Rajendra R. Wahule Sir | Vishwajeet Science Academy
+    </footer>
+    <script>
+        function openBatch(evt, batchName) {
+            var i, batchSections, tablinks;
+            batchSections = document.getElementsByClassName("batch");
+            for (i = 0; i < batchSections.length; i++) {
+                batchSections[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(batchName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        function toggleChapter(evt, dropID) {
+            document.querySelectorAll('.dropdown-content').forEach(function(el){
+                if(el.id !== dropID) el.style.display = "none";
+            });
+            var dropMenu = document.getElementById(dropID);
+            if (dropMenu.style.display === "block") {
+                dropMenu.style.display = "none";
+            } else {
+                dropMenu.style.display = "block";
+            }
+            evt.stopPropagation();
+        }
+        document.addEventListener('click', function(e){
+            document.querySelectorAll('.dropdown-content').forEach(function(d){
+                d.style.display = "none";
+            });
+        });
+        document.querySelectorAll('.chapter-tab').forEach(function(tab){
+            tab.addEventListener('click', function(e){ e.stopPropagation(); });
+        });
+    </script>
+</body>
+</html>
