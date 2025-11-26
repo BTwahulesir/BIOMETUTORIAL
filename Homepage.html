@@ -1279,77 +1279,68 @@
                         </div>
                          <!-- Competitive Exam Section -->
        <!-- Competitive Exam Section -->
-<section id="Competitive" class="batch" style="display: block;">
-  <h2>Competitive Exams</h2>
+<section id="CompetitiveExam" class="batch" style="display:none;">
+  <h2>Competitive Exam</h2>
   <div class="batch-content">
-    <div class="image-section">
-      <img src="police-bharati.jpg" alt="Police Bharati" />
-    </div>
-    <div class="links-section">
+    <div class="links-section" style="width:100%">
+      <div style="display:flex;gap:1em;justify-content:center;margin-bottom:20px;">
+        <button class="subtablink active" onclick="openSubBatch(event, 'MPSC')">MPSC</button>
+        <button class="subtablink" onclick="openSubBatch(event, 'UPSC')">UPSC</button>
+      </div>
 
-      <div class="chapter-tab" onclick="toggleExam(event, 'policeBharati01')">Police Bharati</div>
-      <ul class="dropdown-content" id="policeBharati01" style="display: none;">
-        <li><strong>Notes:</strong>
-          <ul>
-            <li><a href="notes_policebharati.pdf" target="_blank">Police Bharati Notes PDF</a></li>
-            <li><a href="summary_policebharati.txt" target="_blank">Text Summary</a></li>
-          </ul>
-        </li>
-        <li><strong>Video Lecture:</strong>
-          <ul>
-            <li><a href="https://youtube.com/watch?v=xyz1" target="_blank">YouTube Intro</a></li>
-            <li><a href="https://vimeo.com/videoID1" target="_blank">Detailed Vimeo Video</a></li>
-          </ul>
-        </li>
-        <li><strong>Online Test:</strong>
-          <ul>
-            <li><a href="test_policebharati.html" target="_blank">Topic Test</a></li>
-          </ul>
-        </li>
-      </ul>
+      <!-- MPSC Section -->
+      <div id="MPSC" class="subbatch" style="display:block">
+        <h3 style="color:#1854a3">MPSC Exam Resources</h3>
+        <div class="chapter-tabs">
+          <div class="chapter-tab" onclick="toggleChapter(event, 'mpscch1')">MPSC Topic 1
+            <ul class="dropdown-content" id="mpscch1">
+              <li><strong>Notes:</strong>
+                <ul>
+                  <li><a href="#" target="_blank">PDF Notes</a></li>
+                </ul>
+              </li>
+              <li><strong>Video Lecture:</strong>
+                <ul>
+                  <li><a href="#" target="_blank">YouTube Video</a></li>
+                </ul>
+              </li>
+              <li><strong>Online Test:</strong>
+                <ul>
+                  <li><a href="#" target="_blank">Quiz</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- Add more MPSC topics as needed -->
+        </div>
+      </div>
 
-      <div class="chapter-tab" onclick="toggleExam(event, 'mpsc01')">MPSC</div>
-      <ul class="dropdown-content" id="mpsc01" style="display: none;">
-        <li><strong>Notes:</strong>
-          <ul>
-            <li><a href="notes_mpsc.pdf" target="_blank">MPSC Notes PDF</a></li>
-            <li><a href="summary_mpsc.txt" target="_blank">Text Summary</a></li>
-          </ul>
-        </li>
-        <li><strong>Video Lecture:</strong>
-          <ul>
-            <li><a href="https://youtube.com/watch?v=xyz2" target="_blank">YouTube Intro</a></li>
-            <li><a href="https://vimeo.com/videoID2" target="_blank">Detailed Vimeo Video</a></li>
-          </ul>
-        </li>
-        <li><strong>Online Test:</strong>
-          <ul>
-            <li><a href="test_mpsc.html" target="_blank">Topic Test</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <div class="chapter-tab" onclick="toggleExam(event, 'upsc01')">UPSC</div>
-      <ul class="dropdown-content" id="upsc01" style="display: none;">
-        <li><strong>Notes:</strong>
-          <ul>
-            <li><a href="notes_upsc.pdf" target="_blank">UPSC Notes PDF</a></li>
-            <li><a href="summary_upsc.txt" target="_blank">Text Summary</a></li>
-          </ul>
-        </li>
-        <li><strong>Video Lecture:</strong>
-          <ul>
-            <li><a href="https://youtube.com/watch?v=xyz3" target="_blank">YouTube Intro</a></li>
-            <li><a href="https://vimeo.com/videoID3" target="_blank">Detailed Vimeo Video</a></li>
-          </ul>
-        </li>
-        <li><strong>Online Test:</strong>
-          <ul>
-            <li><a href="test_upsc.html" target="_blank">Topic Test</a></li>
-          </ul>
-        </li>
-      </ul>
-
+      <!-- UPSC Section -->
+      <div id="UPSC" class="subbatch" style="display:none">
+        <h3 style="color:#1854a3">UPSC Exam Resources</h3>
+        <div class="chapter-tabs">
+          <div class="chapter-tab" onclick="toggleChapter(event, 'upscch1')">UPSC Topic 1
+            <ul class="dropdown-content" id="upscch1">
+              <li><strong>Notes:</strong>
+                <ul>
+                  <li><a href="#" target="_blank">PDF Notes</a></li>
+                </ul>
+              </li>
+              <li><strong>Video Lecture:</strong>
+                <ul>
+                  <li><a href="#" target="_blank">YouTube Video</a></li>
+                </ul>
+              </li>
+              <li><strong>Online Test:</strong>
+                <ul>
+                  <li><a href="#" target="_blank">Quiz</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- Add more UPSC topics as needed -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1358,19 +1349,31 @@
         &copy; 2025 Biometutorial by Rajendra R. Wahule Sir | Vishwajeet Science Academy
     </footer>
     <script>
-        function openBatch(evt, batchName) {
-            var i, batchSections, tablinks;
-            batchSections = document.getElementsByClassName("batch");
-            for (i = 0; i < batchSections.length; i++) {
-                batchSections[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(batchName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
+        function openSubBatch(evt, subBatch) {
+  var i, subbatches, subtablinks;
+  subbatches = document.getElementsByClassName("subbatch");
+  for (i = 0; i < subbatches.length; i++) {
+    subbatches[i].style.display = "none";
+  }
+  subtablinks = document.getElementsByClassName("subtablink");
+  for (i = 0; i < subtablinks.length; i++) {
+    subtablinks[i].className = subtablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(subBatch).style.display = "block";
+  if(evt) evt.currentTarget.className += " active";
+}
+
+// Ensure when the Competitive Exam is selected, the first subtab is visible:
+if (typeof openBatch === "function") {
+  const origOpenBatch = openBatch;
+  window.openBatch = function(evt, batchName) {
+    origOpenBatch(evt, batchName);
+    if(batchName === 'CompetitiveExam'){
+      openSubBatch(null, 'MPSC');
+    }
+  }
+}
+
         function toggleChapter(evt, dropID) {
             document.querySelectorAll('.dropdown-content').forEach(function(el){
                 if(el.id !== dropID) el.style.display = "none";
@@ -1394,6 +1397,7 @@
     </script>
 </body>
 </html>
+
 
 
 
