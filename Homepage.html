@@ -1374,6 +1374,19 @@ if (typeof openBatch === "function") {
   }
 }
 
+       function openBatch(evt, batchName) {
+            var i, batchSections, tablinks;
+            batchSections = document.getElementsByClassName("batch");
+            for (i = 0; i < batchSections.length; i++) {
+                batchSections[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(batchName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
         function toggleChapter(evt, dropID) {
             document.querySelectorAll('.dropdown-content').forEach(function(el){
                 if(el.id !== dropID) el.style.display = "none";
@@ -1397,6 +1410,7 @@ if (typeof openBatch === "function") {
     </script>
 </body>
 </html>
+
 
 
 
